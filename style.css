@@ -2,51 +2,154 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body{
- margin-top: 3%;
- margin-left: 10%;
+ margin-top: 5%; /*ajuste de margem no topo*/
+ margin-left: 18%;  /*ajuste de margem esquerda*/
+margin-right: 15%;
 }
 header{
-  display: flex;
-  margin-bottom: 15px;
+  display: flex;  /*organização do bloco header dinamica*/
+  -ms-flex-wrap: wrap; 
+      flex-wrap: wrap;
+       /*caso diminua a tela os blocos são organizados para esqueda*/
+  margin-bottom: 30px;  /*ajuste da margem de baixo*/
 }
 header .titlepage{
-font-family: PT Serif;
-font-weight: 700;
-font-size: 17px;
-font-style: normal;
-line-height: 46,58px;
-letter-spacing: -0.045em;
-text-align: left;
-margin-right: 15%;
-min-width:280px;
+font-family: PT Serif;  /*fonte do titlepage*/
+font-weight: 700;  /*tipo da fonte*/
+font-size: 17px;  /*tamanho da fonte*/
+font-style: normal;  /*estilo da fonte*/
+margin-right: 18%;  /*margem direita*/
+min-width:280px;  /*tamanho fixo */
 }
 header .intr h1{
-font-family: Poppins;
-font-size: 15px;
-font-style: normal;
-font-weight: 600;
-line-height: 27px;
-letter-spacing: 0em;
-text-align: left;
+font-family: Poppins;  /*fonte h1*/
+font-size: 15px;  /*tamanho da fonte*/
+font-style: normal;  /*estilo da fonte*/
+font-weight: 600; /*tipo da fonte*/
 }
 header .intr p{
-font-family: Poppins;
-width: 280px;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0em;
-text-align: left;
+font-family: Poppins;  /*fonte*/
+width: 280px;  /*tamanho do bloco*/
+font-size: 13px;  /*tamanho da letra*/
+font-style: normal;  /*estilo da fonte*/
+font-weight: 400;  /*tipo da fonte*/
+line-height: 20px;  /*espaço entre as linhas*/
 }
 section {
-
-  display:grid;
+display: flex; /*dimensionamento dos blocos section*/
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      /*fez com que ao diminuir a tela as imagens fossem se organizando a esquerda*/
 }
 section img{
-  max-width:350px;
+  max-width:350px; 
   max-height:225px;
-  width: auto;
-  height: auto;
-  margin-right: 100px;
+  /*dimensionamento da imagem*/
+}
+section .container {
+  height: 300px; /*espaço entre um container e outro quando ele estiver na linha de baixo*/
+  display: flex; /*ajuste do blocos dentro do container*/
+}
+section .container .box h1{
+  font-family: Poppins;  /*fonte do h1*/
+  font-weight: 600;  /*tipo da fonte*/
+  font-size: 15px;  /*tamanho fonte*/   
+}
+section .container  p {
+  position: relative; /*ajuste de localização*/
+  width: 102px; /*ajuste de tamanho*/
+  height: 20px; /*ajuste de tamanho*/
+  top: 39px; /*ajuste de localização*/
+  left: -42px; /*ajuste de localização*/
+  font-family: PT Serif;  /*fonte de escrita*/
+  font-size: 12px; /*tamanho da fonte*/
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          /*ajuste para deixar vertical*/
+  text-transform: uppercase; /*deixar a escrita em letra maiuscula*/
+}
+.container:nth-child(2) {
+  margin-top: 6em;
+}
+.container:nth-child(5) {
+  margin-top: 8em;
+}
+.second-line {
+  margin-top: 2em;
+}
+/*ajuste dos containers dinamicos*/
+@media screen and (max-width: 1029px){
+  header .titlepage{
+    margin-right: 13%;
+  }
+}
+@media screen and (max-width: 972px){
+  header .titlepage{
+    margin-right: 9%;
+  }
+  .container:nth-child(1) {
+    margin-top: 0em !important;
+  }
+  .container:nth-child(3) {
+    margin-top: 0em !important;
+  }
+  .container:nth-child(5) {
+    margin-top: 0em !important;
+  }
+  .container:nth-child(2) {
+    margin-top: 3em !important;
+  }
+  .container:nth-child(4) {
+    margin-top: 3em !important;
+  }
+  .container:nth-child(6) {
+    margin-top: 3em !important;
+  }
+  .box img {
+    width: 158px !important;
+  }
+}
+@media screen and (max-width: 777px){
+  .container p{
+    left: 13px !important;
+  }
+  .box {
+    width: 100px;
+  }
+  .box img {
+    max-width:200px;
+  }
+}
+@media screen and (max-width: 617px){
+  .box img{
+    max-width: 120px;
+  }
+  .box {
+    width: 80px;
+  }
+  .container p{
+    left: -3px !important;
+  }
+}
+@media screen and (max-width:545px){
+  .box img{
+    max-width: 120px;
+  }
+  .box {
+    width: 60px;
+  }
+  .container p{
+    left: 13px !important;
+  }
+}
+@media screen and (max-width:482px){
+  .box img{
+    max-width: 100px;
+  }
+  .box {
+    width: 40px;
+  }
+  .container p{
+    left: 13px !important;
+  }
 }
